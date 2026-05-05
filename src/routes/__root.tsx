@@ -31,10 +31,19 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
 
+      // SEO
+      { name: "description", content: "Blinkit Showcase — Instant Delivery, reimagined." },
+      { name: "theme-color", content: "#D7FF00" },
+
+      // Open Graph
       { property: "og:type", content: "website" },
       { property: "og:title", content: "Blinkit Showcase" },
-      { name: "twitter:card", content: "summary" },
+      { property: "og:description", content: "Premium Blinkit-inspired instant delivery experience." },
+
+      // Twitter
+      { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Blinkit_in" },
+      { name: "twitter:title", content: "Blinkit Showcase" },
     ],
     links: [
       {
@@ -42,10 +51,32 @@ export const Route = createRootRoute({
         href: appCss,
       },
 
-      // Replace old Lovable favicon/logo here
-      
-      
-      
+      // MAIN FAVICON (put favicon.ico inside /public)
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/favicon.ico",
+      },
+
+      // PNG favicon
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        href: "/blinkit-favicon-32x32.png",
+      },
+
+      // Apple icon
+      {
+        rel: "apple-touch-icon",
+        href: "/apple-touch-icon.png",
+      },
+
+      // Manifest
+      {
+        rel: "manifest",
+        href: "/site.webmanifest",
+      },
     ],
   }),
   shellComponent: RootShell,
