@@ -23,6 +23,16 @@ export default function Transport() {
 
   const [progress, setProgress] = useState(0);
   const [eta, setEta] = useState(10);
+  const [windLines, setWindLines] = useState<Array<{width: string, top: string}>>([]);
+
+  useEffect(() => {
+    // Generate wind lines data on client side to avoid hydration mismatch
+    const lines = Array.from({ length: 10 }).map(() => ({
+      width: Math.random() * 150 + 80 + "px",
+      top: Math.random() * 50 + 20 + "%",
+    }));
+    setWindLines(lines);
+  }, []);
 
   useEffect(() => {
     if (!sectionRef.current) return;
@@ -167,13 +177,13 @@ export default function Transport() {
 
         {/* NEW: Wind Lines */}
         <div className="absolute inset-0 z-20 pointer-events-none">
-          {Array.from({ length: 10 }).map((_, i) => (
+          {windLines.map((line, i) => (
             <div
               key={i}
               className="wind-line absolute h-[1px] bg-white/20"
               style={{
-                width: Math.random() * 150 + 80 + "px",
-                top: Math.random() * 50 + 20 + "%",
+                width: line.width,
+                top: line.top,
                 left: "110%",
               }}
             />

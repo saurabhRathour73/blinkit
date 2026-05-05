@@ -125,7 +125,7 @@ function ParticleLeaf({ p, accent }) {
       key={p.id}
       className="absolute pointer-events-none select-none"
       style={{ left: `${p.x}%`, bottom: "-10%", fontSize: p.size }}
-      animate={{ y: [0, -window.innerHeight * 1.2], rotate: [p.rotate, p.rotate + 180], x: [0, 40, -30, 20, 0] }}
+      animate={{ y: [0, "-120vh"], rotate: [p.rotate, p.rotate + 180], x: [0, 40, -30, 20, 0] }}
       transition={{ duration: p.duration, delay: p.delay, repeat: Infinity, ease: "linear" }}
     >
       {p.emoji}

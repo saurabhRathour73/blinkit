@@ -8,7 +8,7 @@ import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import FeaturesBox from "@/components/sections/FeaturesBox";
 import Transport from "@/components/sections/Transport";
-import BlinkitShowcase from "../components/sections/BlinkitShowcase";
+import BlinkitShowcase from "../components/sections/BlinkitShowcase.jsx";
 import GlobeMap from "@/components/sections/GlobeMap";
 import TruckSection from "@/components/sections/TruckSection";
 import CTA from "@/components/sections/CTA";

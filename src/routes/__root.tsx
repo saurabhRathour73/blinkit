@@ -26,15 +26,13 @@ function NotFoundComponent() {
 
 export const Route = createRootRoute({
   head: () => ({
+    title: "Blinkit Showcase",
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Blinkit | 10 Minute Delivery" },
-      { name: "description", content: "Instant delivery of groceries, medicines, electronics and more. Get everything in 10 minutes or less." },
-      { name: "author", content: "Blinkit" },
-      { property: "og:title", content: "Blinkit | 10 Minute Delivery" },
-      { property: "og:description", content: "Instant delivery of groceries, medicines, electronics and more. Get everything in 10 minutes or less." },
+
       { property: "og:type", content: "website" },
+      { property: "og:title", content: "Blinkit Showcase" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Blinkit_in" },
     ],
@@ -43,6 +41,11 @@ export const Route = createRootRoute({
         rel: "stylesheet",
         href: appCss,
       },
+
+      // Replace old Lovable favicon/logo here
+      
+      
+      
     ],
   }),
   shellComponent: RootShell,
